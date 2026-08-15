@@ -43,17 +43,12 @@
     <script>
       (function() {
         var savedLang = localStorage.getItem('site_lang');
-        if (savedLang === 'en') {
+        if (savedLang === 'en' && !window.location.pathname.endsWith('en.html')) {
           window.location.href = './en.html';
-        } else if (!savedLang) {
-          var userLang = navigator.language || navigator.userLanguage;
-          if (!userLang.startsWith('he')) {
-            window.location.href = './en.html';
-          }
         }
       })();
     </script>
-    
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -61,18 +56,6 @@
       "name": "AutoFlow",
       "description": "סוכנות דיגיטל ואוטומציה עסקית ואישית - מערכות חכמות שעושות סדר בבלאגן",
       "url": "https://globalcalcpro.com/",
-      "image": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1200&h=630&auto=format&fit=crop",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "IL"
-      },
-      "priceRange": "$$"
-    }
-    </script>
-    
-    <link rel="stylesheet" href="./assets/css/style.css">
-</head>�ומציה עסקית ואישית - מערכות חכמות שעושות סדר בבלאגן",
-      "url": "https://almog787.github.io/AutoFlow/",
       "image": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1200&h=630&auto=format&fit=crop",
       "address": {
         "@type": "PostalAddress",
