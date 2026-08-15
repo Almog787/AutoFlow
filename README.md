@@ -3,7 +3,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Status-Active-brightgreen" alt="Status">
   <img src="https://img.shields.io/badge/Stack-Web%20%26%20Automation-blue" alt="Stack">
-  <a href="https://autoflow-il.github.io/AutoFlow/">
+  <a href="https://almog787.github.io/AutoFlow/">
     <img src="https://img.shields.io/badge/Website-Visit%20Site-orange" alt="Website">
   </a>
 </p>
@@ -26,7 +26,7 @@
 
 #### 📞 צרו קשר
 מזמינים אתכם לשיחת ייעוץ חינם (15 דקות) למיפוי הפוטנציאל האוטומטי בעסק שלכם.
-🌐 **לאתר שלנו:** [https://autoflow-il.github.io/AutoFlow/](https://autoflow-il.github.io/AutoFlow/)
+🌐 **לאתר שלנו:** [https://almog787.github.io/AutoFlow/](https://almog787.github.io/AutoFlow/)
 
 ---
 
@@ -51,7 +51,7 @@ Instead of hiring employees for manual repetitive tasks, we let technology work 
 
 #### 📞 Get In Touch
 We invite you to a free 15-minute consultation call to map the automation potential in your business.
-🌐 **Visit our website:** [https://autoflow-il.github.io/AutoFlow/](https://autoflow-il.github.io/AutoFlow/)
+🌐 **Visit our website:** [https://almog787.github.io/AutoFlow/](https://almog787.github.io/AutoFlow/)
 
 ---
 
