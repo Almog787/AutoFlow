@@ -1,0 +1,6 @@
+{
+  "name": "AutoFlow",
+  "description": "סוכנות דיגיטל ואוטומציה עסקית ואישית - מערכות חכמות שעושות סדר בבלאגן",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
