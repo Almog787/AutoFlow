@@ -452,12 +452,58 @@
         <!-- Contact Section -->
         <section id="contact" class="section contact">
             <div class="container">
-                <div class="contact-card reveal" style="text-align: center; max-width: 600px; margin: 0 auto;">
+                <div class="contact-card reveal">
                     <h3>בואו נדבר תכל'ס</h3>
-                    <p>מוכנים לחסוך זמן ולהעיף את העסק (או החיים) קדימה? דברו איתנו ונבדוק יחד איך אפשר לעזור.</p>
+                    <p>השאירו פרטים ונחזור אליכם לשיחת אפיון וייעוץ ללא עלות, או פנו אלינו ישירות בוואטסאפ.</p>
                     
-                    <a href="https://wa.me/972523609227?text=היי%20משה,%20הגעתי%20מהאתר%20ואשמח%20להתייעץ%20לגבי%20אוטומציה" target="_blank" class="btn btn-primary" onclick="gtag('event', 'click_whatsapp', {'location': 'footer'});" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; background-color: #25D366; border-color: #25D366; font-size: 1.2rem; padding: 15px 30px; margin-top: 30px; width: 100%;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    <div id="contact-alert" class="form-alert form-alert-error" role="alert">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                        <span id="contact-alert-text">חלה שגיאה בשליחה. אנא נסו שוב או פנו בוואטסאפ.</span>
+                    </div>
+
+                    <form id="lead-form" class="lead-form" novalidate>
+                        <!-- Honeypot anti-spam for Google Apps Script -->
+                        <input type="text" name="bot_check" id="bot_check" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
+                        
+                        <div class="form-group">
+                            <label for="lead-name">שם מלא <span class="required-star">*</span></label>
+                            <input type="text" id="lead-name" name="name" class="form-control" placeholder="ישראל ישראלי" required autocomplete="name">
+                            <div class="field-error" id="name-error">נא להזין שם מלא תקין</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="lead-phone">מספר טלפון נייד <span class="required-star">*</span></label>
+                            <input type="tel" id="lead-phone" name="phone" class="form-control" placeholder="050-1234567" required autocomplete="tel" dir="ltr">
+                            <div class="field-error" id="phone-error">נא להזין מספר טלפון תקין (לפחות 9 ספרות)</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="lead-message">מה האתגר או התהליך שתרצו לייעל / לאוטם? <span style="font-size: 0.85em; color: #64748b; font-weight: normal;">(אופציונלי)</span></label>
+                            <textarea id="lead-message" name="message" class="form-control" placeholder="ספרו לנו בקצרה על העסק או המשימות שתרצו להעביר למצב אוטומטי..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">
+                            <span class="btn-text">קבלת שיחת ייעוץ חינם</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                        </button>
+                    </form>
+
+                    <!-- Success State -->
+                    <div id="lead-success" class="success-message">
+                        <div class="success-icon">✓</div>
+                        <h4>מעולה, הפרטים התקבלו בהצלחה!</h4>
+                        <p>הליד נקלט במערכת שלנו ונשמר ב-CRM. ניצור איתך קשר בהקדם לתיאום שיחת ייעוץ אישית.</p>
+                        <button type="button" class="btn btn-outline" id="reset-form-btn" style="margin-top: 20px; font-size: 0.95rem; padding: 10px 20px;">
+                            שליחת פנייה נוספת
+                        </button>
+                    </div>
+
+                    <div class="form-divider">
+                        <span>או צרו קשר מיידי</span>
+                    </div>
+
+                    <a href="https://wa.me/972523609227?text=היי%20משה,%20הגעתי%20מהאתר%20ואשמח%20להתייעץ%20לגבי%20אוטומציה" target="_blank" class="btn-whatsapp-secondary" onclick="gtag('event', 'click_whatsapp', {'location': 'lead_form'});">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                         דברו איתנו בוואטסאפ
                     </a>
                 </div>
