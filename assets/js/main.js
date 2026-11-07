@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (typeof window.gtag === 'function') {
                     window.gtag('event', 'generate_lead', {
                         event_category: 'Contact',
-                        event_label: isHebrew ? 'טופס לידים' : 'Lead Form'
+                        event_label: isHebrew ? 'טופס פנייה' : 'Contact Form'
                     });
                 }
 
