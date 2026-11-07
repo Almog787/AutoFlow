@@ -160,9 +160,24 @@ document.addEventListener('DOMContentLoaded', function() {
             const scriptUrl = GOOGLE_SHEETS_SCRIPT_URL || window.GOOGLE_SHEETS_SCRIPT_URL;
 
             try {
-                if (scriptUrl && scriptUrl.startsWith('http')) {
-                    // שליחה ישירה ל-Google Apps Script Web App
-                    // שימוש ב-mode: 'no-cors' ו-text/plain מבטיח שלא יהיה preflight OPTIONS ושגוגל תקלוט את ה-JSON
+                let sent = false;
+
+                // נסיון 1: שליחה דרך שרת Node המקומי (ללא מגבלות CORS עם אימות מלא)
+                try {
+                    const localRes = await fetch('/api/lead', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+                    if (localRes.ok) {
+                        sent = true;
+                    }
+                } catch (netErr) {
+                    console.warn('Local proxy not available, falling back to direct webhook:', netErr);
+                }
+
+                // נסיון 2 (אם לא נשלח או באחסון סטטי בלבד): שליחה ישירה ל-Google Apps Script Web App
+                if (!sent && scriptUrl && scriptUrl.startsWith('http')) {
                     await fetch(scriptUrl, {
                         method: 'POST',
                         mode: 'no-cors',
@@ -171,17 +186,6 @@ document.addEventListener('DOMContentLoaded', function() {
                         },
                         body: JSON.stringify(payload)
                     });
-                } else {
-                    // ניסיון שליחה דרך פרוקסי שרת במידה וקיים
-                    try {
-                        await fetch('/api/lead', {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify(payload)
-                        });
-                    } catch (netErr) {
-                        console.warn('Local server notification:', netErr);
-                    }
                 }
 
                 // רישום איוונט אנליטיקס
