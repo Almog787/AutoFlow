@@ -3,7 +3,7 @@
 // -------------------------------------------------------------------------
 // כתובת ה-Web App של Google Apps Script
 // =========================================================================
-export const GOOGLE_SHEETS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzTEpLPp7SEr3c4TMbO7GOJewlcPm2CM93tU6ada4LXy3K7nbumEF44m2KSren8SYUp/exec';
+export const GOOGLE_SHEETS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwbnMq4XOc6yNxp5de11mgI-071s0kdWhWEFq6fesxWqu7EB3BqtfZRqRq0JCP4GF2s/exec';
 
 document.addEventListener('DOMContentLoaded', function() {
     // ==========================================

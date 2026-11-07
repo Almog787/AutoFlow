@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 // API proxy endpoint for forwarding leads to Google Sheets (optional server route)
 app.post('/api/lead', async (req, res) => {
   try {
-    const scriptUrl = process.env.GOOGLE_SCRIPT_URL || req.body.scriptUrl || 'https://script.google.com/macros/s/AKfycbzTEpLPp7SEr3c4TMbO7GOJewlcPm2CM93tU6ada4LXy3K7nbumEF44m2KSren8SYUp/exec';
+    const scriptUrl = process.env.GOOGLE_SCRIPT_URL || req.body.scriptUrl || 'https://script.google.com/macros/s/AKfycbwbnMq4XOc6yNxp5de11mgI-071s0kdWhWEFq6fesxWqu7EB3BqtfZRqRq0JCP4GF2s/exec';
     if (!scriptUrl) {
       return res.status(200).json({
         success: true,
