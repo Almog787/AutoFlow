@@ -201,8 +201,8 @@ document.addEventListener('DOMContentLoaded', function() {
             } catch (err) {
                 console.error('Submission error:', err);
                 const errorMsg = isHebrew
-                    ? 'חלה שגיאה בשליחת הפרטים. אנא נסו שוב או פנו אלינו ישירות בוואטסאפ.'
-                    : 'An error occurred while submitting. Please try again or reach out on WhatsApp.';
+                    ? 'חלה שגיאה בשליחת הפרטים. אנא נסו שוב בעוד מספר רגעים.'
+                    : 'An error occurred while submitting. Please try again in a few moments.';
                 showAlert(errorMsg);
 
                 if (submitBtn) {
