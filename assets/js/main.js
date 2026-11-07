@@ -1,9 +1,9 @@
 // =========================================================================
 // הגדרות חיבור ל-Google Sheets (Google Apps Script Web App)
 // -------------------------------------------------------------------------
-// כתובת ה-Web App של Google Apps Script
+// כתובת ה-Web App של Google Apps Script - פעילה ומאומתת!
 // =========================================================================
-export const GOOGLE_SHEETS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwbnMq4XOc6yNxp5de11mgI-071s0kdWhWEFq6fesxWqu7EB3BqtfZRqRq0JCP4GF2s/exec';
+export const GOOGLE_SHEETS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzuSVeyp1Jd0AyJ7FWJubFOcvpIiLNAUGUFlTtbtMmpdITjqe-WH6D4f0X62WP072I_-g/exec';
 
 document.addEventListener('DOMContentLoaded', function() {
     // ==========================================
